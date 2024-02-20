@@ -2,18 +2,23 @@
 const km = prompt('Quanti km vuoi percorrere?')
 console.log(km);
 //2
-const etaUtente = prompt('Quanti anni hai?')
-console.log (etaUtente);
+const etaPasseggero = prompt('Quanti anni hai?')
+console.log (etaPasseggero);
 //3
 let prezzoBiglietto = km * 0.21;
 
 let sconto = '';
 
-if(etaUtente < 18){
-  sconto = prezzoBiglietto * 20 / 100;
-} else if(etaUtente > 65){
-  sconto = prezzoBiglietto * 40 / 100;
+if(etaPasseggero < 18){
+  message = 'I passeggeri minorenni hanno diritto ad uno sconto del 20%, il tuo biglietto ha un costo di: €'
+  sconto = prezzoBiglietto * 0.2;
+} else if(etaPasseggero > 65){
+  message = 'I passeggeri over 65 hanno diritto ad uno sconto del 40%, il tuo biglietto ha un costo di: €'
+  sconto = prezzoBiglietto * 0.4;
+} else{
+  message = 'Il tuo biglietto ha un costo di: €'
 }
 prezzoBiglietto = prezzoBiglietto - sconto 
-prezzoBiglietto = Math.round(prezzoBiglietto*100)/100;
 console.log(prezzoBiglietto);
+
+document.getElementById('output').innerHTML = message + prezzoBiglietto.toFixed(2);
