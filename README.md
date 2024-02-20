@@ -10,5 +10,5 @@ L’output del prezzo finale va messo fuori in forma umana (con massimo due deci
 ## Svolgimento
 1. prompt km da percorrere
 2. prompt età passeggero
-3. calcolo prezzo biglietto con possibili condizioni sconto
+3. calcolo prezzo biglietto con possibili condizioni sconto (20% under 18 e 40% over 65) e lo salvo in una variabile
 4. Output prezzo biglietto
